@@ -27,12 +27,6 @@ def duration_in_seconds(outfile=stdout):
     outfile.write(str(end - start) + "\n")
 
 
-def strMUT(text, dic):
-    """ Replaces keys of dic with values of dic in text. 2005-02 by Emanuel Rumpf """
-    pat = "(%s)" % "|".join(map(re.escape, dic.keys()))
-    return re.sub(pat, lambda m: dic[m.group()], text)
-
-
 def getEasy(f):
     """ Pure python fasta reader  """
     tag = None
